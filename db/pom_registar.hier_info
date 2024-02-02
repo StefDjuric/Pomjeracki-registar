@@ -1,0 +1,9 @@
+|pom_registar
+ULAZ => X.DATAIN
+CLK => IZLAZ~reg0.CLK
+CLK => X.CLK
+CLK => Y.CLK
+CLK => Z.CLK
+IZLAZ <= IZLAZ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,28 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY pom_registar is 
+	PORT( ULAZ:       	IN  STD_LOGIC;
+			CLK:				IN  STD_LOGIC;
+			IZLAZ:			OUT STD_LOGIC);
+END pom_registar;
+
+ARCHITECTURE behavioral of pom_registar is
+
+BEGIN
+
+	PROCESS(CLK)
+	VARIABLE X, Y, Z: STD_LOGIC;
+	
+	BEGIN
+		iF(CLK'EVENT AND CLK = '1') THEN
+			IZLAZ <= Z;
+			Z:=Y;
+			Y:= X;
+			x:= ULAZ;
+		END IF;
+	
+	END PROCESS;
+	
+
+END behavioral;
